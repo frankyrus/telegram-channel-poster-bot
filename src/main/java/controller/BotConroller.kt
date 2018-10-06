@@ -32,8 +32,8 @@ class BotConroller {
             val text = update.message.text
 
             when {
-                text?.startsWith(START_COMMAND) == true -> onStartCommand(chatId)
-                text?.startsWith(ECHO_COMMAND) == true -> onEchoCommand(chatId, text)
+                text.startsWith(START_COMMAND) -> onStartCommand(chatId)
+                text.startsWith(ECHO_COMMAND) -> onEchoCommand(chatId, text)
             }
         }
     }
